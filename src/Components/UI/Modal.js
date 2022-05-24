@@ -4,7 +4,7 @@ import classes from "./Modal.module.css"
 
 
 function Backdrop(props) {
-    return <div className={classes.backdrop} />
+    return <div className={classes.backdrop} onClick={props.onDismiss} />
 }
 
 function ModalOverlay(props) {
@@ -19,7 +19,7 @@ export default function Modal(props) {
     return (
         <Fragment>
             {ReactDOM.createPortal(
-                <Backdrop />,
+                <Backdrop onDismiss={props.onDismiss} />,
                 document.getElementById('overlay-root')
             )}
             {ReactDOM.createPortal(

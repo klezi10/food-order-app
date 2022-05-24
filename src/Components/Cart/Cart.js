@@ -7,14 +7,14 @@ export default function Cart(props) {
     }].map(item => <li key={item.id}>{item.name}</li>)}</ul>
 
     return (
-        <Modal>
+        <Modal onDismiss={props.onDismiss}>
             {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
                 <span>36.50</span>
             </div>
             <div className={classes.actions}>
-                <button className={classes['button--alt']}>Close</button>
+                <button className={classes['button--alt']} onClick={props.onDismiss}>Close</button>
                 <button className={classes.button}>Order</button>
             </div>
         </Modal>
