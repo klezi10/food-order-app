@@ -38,7 +38,6 @@ export default function AvailableMeals() {
         description={meal.description}
         price={meal.price}
       />
-   
   )
 
   return (

@@ -4,7 +4,6 @@ import MealsImg from "../../assets/meals.jpg"
 import HeaderCartButton from "./HeaderCartButton"
 
 export default function Header(props) {
-   
     return (
         <Fragment>
             <header className={classes.header}>
