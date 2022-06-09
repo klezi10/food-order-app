@@ -18,7 +18,9 @@ export default function Cart(props) {
         })
     }
 
-    function removeCartItemHandler(id) { }
+    function removeCartItemHandler(id) {
+        cartCtx.removeItem(id)
+     }
 
     const cartItems = <ul className={classes['cart-items']}>{
         cartCtx.items.map(item => (
